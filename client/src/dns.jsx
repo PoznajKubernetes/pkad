@@ -55,27 +55,34 @@ export default class Dns extends React.Component {
         <div className="panel panel-default">
           <div className="panel-heading">Server side DNS query</div>
           <div className="panel-body">
-            <form className="form" onSubmit={this.handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="dns-type">DNS Type</label> { " " }
-                <input
-                  id="dns-type"
-                  name="type"
-                  value={this.state.query.type}
-                  onChange={this.handleChange}
-                  type="text"/>
+            <form onSubmit={this.handleSubmit}>
+              <div className="form-group row">
+                <label className="col-sm-1 col-form-label" 
+                  htmlFor="dns-type">
+                    DNS Type</label> { " " }
+                <div class="col-sm-2">
+                  <input
+                    id="dns-type"
+                    name="type"
+                    value={this.state.query.type}
+                    onChange={this.handleChange}
+                    type="text"/>
+                </div>
               </div> { " " }
-              <div className="form-group">
-                <label htmlFor="dns-name">Name</label> { " " }
-                <input
-                  id="dns-name"
-                  name="name"
-                  value={this.state.query.name}
-                  onChange={this.handleChange}
-                  type="text"/>
+              <div className="form-group row">
+                <label className="col-sm-1 col-form-label" 
+                  htmlFor="dns-name">Name</label> { " " }
+                <div class="col-sm-2">
+                  <input
+                    id="dns-name"
+                    name="name"
+                    value={this.state.query.name}
+                    onChange={this.handleChange}
+                    type="text"/>
+                </div>
               </div> { " " }
               <input
-                className="btn btn-default"
+                className="btn btn-primary"
                 type="submit"
                 value="Query" />
             </form>
