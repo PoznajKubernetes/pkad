@@ -29,7 +29,7 @@ MAKEFLAGS += --no-builtin-rules
 .SUFFIXES:
 
 # Golang package.
-PKG := github.com/kubernetes-up-and-running/kuard
+PKG := github.com/PoznajKubernetes/pkad
 
 # Registry to push to.
 REGISTRY ?= gcr.io/kuar-demo
