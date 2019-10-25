@@ -25,7 +25,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/kubernetes-up-and-running/kuard/pkg/sitedata"
+	"github.com/PoznajKubernetes/pkad/pkg/sitedata"
 )
 
 type TemplateGroup struct {

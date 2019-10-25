@@ -24,8 +24,8 @@ import (
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	"github.com/kubernetes-up-and-running/kuard/pkg/app"
-	"github.com/kubernetes-up-and-running/kuard/pkg/version"
+	"github.com/PoznajKubernetes/pkad/pkg/app"
+	"github.com/PoznajKubernetes/pkad/pkg/version"
 )
 
 func main() {
@@ -37,7 +37,7 @@ func main() {
 
 	pflag.Parse()
 
-	log.Printf("Starting kuard version: %v", version.VERSION)
+	log.Printf("Starting pkad version: %v", version.VERSION)
 	log.Println(strings.Repeat("*", 70))
 	log.Println("* WARNING: This server may expose sensitive")
 	log.Println("* and secret information. Be careful.")

@@ -23,7 +23,7 @@ import (
 	"strings"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/kubernetes-up-and-running/kuard/pkg/apiutils"
+	"github.com/PoznajKubernetes/pkad/pkg/apiutils"
 	"github.com/miekg/dns"
 )
 

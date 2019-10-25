@@ -24,8 +24,8 @@ import (
 	"time"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/kubernetes-up-and-running/kuard/pkg/apiutils"
-	"github.com/kubernetes-up-and-running/kuard/pkg/htmlutils"
+	"github.com/PoznajKubernetes/pkad/pkg/apiutils"
+	"github.com/PoznajKubernetes/pkad/pkg/htmlutils"
 )
 
 const maxHistory = 20

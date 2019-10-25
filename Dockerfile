@@ -7,11 +7,11 @@ RUN apk update && apk upgrade && apk add --no-cache git nodejs bash npm
 # Get dependencies for Go part of build
 RUN go get -u github.com/jteeuwen/go-bindata/...
 
-WORKDIR /go/src/github.com/kubernetes-up-and-running/kuard/client
+WORKDIR /go/src/github.com/PoznajKubernetes/pkad/client
 # install npm dependencies
 COPY client/package.json .
 RUN npm install
-WORKDIR /go/src/github.com/kubernetes-up-and-running/kuard
+WORKDIR /go/src/github.com/PoznajKubernetes/pkad
 
 # download go modules
 COPY go.sum .
@@ -24,7 +24,7 @@ COPY . .
 
 # This is a set of variables that the build script expects
 ENV VERBOSE=0
-ENV PKG=github.com/kubernetes-up-and-running/kuard
+ENV PKG=github.com/PoznajKubernetes/pkad
 ENV ARCH=amd64
 ENV VERSION=test
 
@@ -35,6 +35,6 @@ RUN build/build-with-cache.sh
 FROM alpine
 
 USER nobody:nobody
-COPY --from=build /go/bin/kuard /pkad
+COPY --from=build /go/bin/pkad /pkad
 
 CMD [ "/pkad" ]
