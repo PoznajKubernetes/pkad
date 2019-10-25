@@ -23,10 +23,12 @@ RUN go mod download
 COPY . .
 
 # This is a set of variables that the build script expects
+ARG VERSION_NAME=test
 ENV VERBOSE=0
 ENV PKG=github.com/PoznajKubernetes/pkad
 ENV ARCH=amd64
-ENV VERSION=test
+ENV VERSION=${VERSION_NAME}
+
 
 # Do the build. Script is part of incoming sources.
 RUN build/build-with-cache.sh
