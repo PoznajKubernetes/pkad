@@ -1,7 +1,7 @@
 # Demo application for "Poznaj Kubernetes"
 Based (and forked) from "Kubernetes Up and Running" KUARD app.
 
-![screenshot](docs/images/screenshot.png)
+![screenshot](docs/images/pkad.png)
 
 ### Running
 
