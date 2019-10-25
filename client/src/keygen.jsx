@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from "react-jsonschema-form";
+import Form from "react-jsonschema-form-bs4";
 import fetchError from './fetcherror';
 
 const schema = {
@@ -138,7 +138,7 @@ export default class KeyGen extends React.Component {
               onChange={this.handleChange}
               onSubmit={this.handleSubmit}>
               <input
-                className="btn btn-default"
+                className="btn btn-primary"
                 type="submit"
                 value="Submit" />
             </Form>
