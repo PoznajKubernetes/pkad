@@ -41,26 +41,20 @@ html, body, #root {
 }
 
 .nav-item {
-  border-top: 1px solid #888;
-  padding: 1rem;
-  color:inherit;
-}
-
-.nav-item:last-child {
-  border-bottom: 1px solid #888;
+  padding: .5rem;
 }
 
 a.nav-item:hover,
 a.nav-item:visited,
 a.nav-item:active,
 a.nav-item:link {
-  color: inherit;
+  color: #ccc;
   text-decoration: inherit;
 }
 
 a.nav-item.active {
   background-color: #333;
-  color: #ccc;
+  color: white;
 }
 
 .content {
@@ -116,4 +110,7 @@ form {
 code {
   background-color: #c4d5f2;
   color: black;
+}
+.bg-poznajKubernetes{
+  background-color:#3B3B3B!important;
 }

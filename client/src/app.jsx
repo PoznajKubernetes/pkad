@@ -45,6 +45,47 @@ export default class App extends React.Component {
 
     return (
       <div className="top">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-poznajKubernetes">
+          <a className="navbar-brand" href="/">
+            <img src="/static/img/logo.png" height="30" alt=""/>
+          </a>
+          <button className="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarNav" aria-controls="navbarNav"
+                  aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item nav-link active">
+                <HighlightLink href={base+"/"} className="nav-item">Request Details</HighlightLink>
+              </li>
+              <li className="nav-item nav-link">
+                <HighlightLink href={base+"/-/env"} className="nav-item">Server Env</HighlightLink>
+              </li>
+              <li className="nav-item nav-link">
+                <HighlightLink href={base+"/-/mem"} className="nav-item">Memory</HighlightLink>
+              </li>
+              <li className="nav-item nav-link">
+                <HighlightLink href={base+"/-/liveness"} className="nav-item">Liveness Probe</HighlightLink>
+              </li>
+              <li className="nav-item nav-link">
+                <HighlightLink href={base+"/-/readiness"} className="nav-item">Readiness Probe</HighlightLink>
+              </li>
+              <li className="nav-item nav-link">
+                <HighlightLink href={base+"/-/dns"} className="nav-item">DNS Query</HighlightLink>
+              </li>
+              <li className="nav-item nav-link">
+                <HighlightLink href={base+"/-/keygen"} className="nav-item">KeyGen Workload</HighlightLink>
+              </li>
+              <li className="nav-item nav-link">
+                <HighlightLink href={base+"/-/memq"} className="nav-item">MemQ Server</HighlightLink>
+              </li>
+              <li className="nav-item nav-link">
+                <a className="nav-item" href={base+"/fs/"}>File system browser</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
         <div className="title">
           <div className="alert alert-danger" role="alert">
             <svg className="icon icon-notification"><use xlinkHref="#icon-notification"></use></svg> { " " }
@@ -57,17 +98,6 @@ export default class App extends React.Component {
         </div>
 
         <div className="nav-container">
-          <div className="nav">
-            <HighlightLink href={base+"/"} className="nav-item">Request Details</HighlightLink>
-            <HighlightLink href={base+"/-/env"} className="nav-item">Server Env</HighlightLink>
-            <HighlightLink href={base+"/-/mem"} className="nav-item">Memory</HighlightLink>
-            <HighlightLink href={base+"/-/liveness"} className="nav-item">Liveness Probe</HighlightLink>
-            <HighlightLink href={base+"/-/readiness"} className="nav-item">Readiness Probe</HighlightLink>
-            <HighlightLink href={base+"/-/dns"} className="nav-item">DNS Query</HighlightLink>
-            <HighlightLink href={base+"/-/keygen"} className="nav-item">KeyGen Workload</HighlightLink>
-            <HighlightLink href={base+"/-/memq"} className="nav-item">MemQ Server</HighlightLink>
-            <a className="nav-item" href={base+"/fs/"}>File system browser</a>
-          </div>
           <div className="content">
             <Locations onNavigation={this.handleNavigation.bind(this)}>
               <Location path={base+"/"} handler={Request} page={this.props.page}/>
